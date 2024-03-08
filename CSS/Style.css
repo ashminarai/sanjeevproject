@@ -5,4 +5,25 @@
 .navbar-content{
     background-color: black;
     opacity: 0.5;
+    display:flex;
+    gap:30px;
 }
+.navs{
+   margin-left:200px;
+   color:white;
+}
+.navs1{
+    color:white;
+ }
+ .navs2{
+    color:white;
+ }
+ .navs3{
+    color:white;
+ }
+ .navs4{
+    color:white;
+ }
+ .navs5{
+    color:white;
+ }
