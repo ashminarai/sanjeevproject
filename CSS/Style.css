@@ -1,0 +1,8 @@
+.navbar-contents-container{
+    background: url(../Images/home.png);
+    height:800px;
+}
+.navbar-content{
+    background-color: black;
+    opacity: 0.5;
+}
