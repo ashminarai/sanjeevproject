@@ -1,0 +1,12 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: [full-width-start] $side-space [content-start]1fr[content-end] $side-space [full-width-end];
+}
+
+.grid-container > * {
+  grid-column: content;
+}
+
+.full-width {
+  grid-column: full-width;
+}

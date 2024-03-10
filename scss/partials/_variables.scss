@@ -1,0 +1,15 @@
+$clr-primary: #fff;
+$clr-secondary-50: rgba(0, 0, 0, 0.66);
+$clr-secondary-100: rgb(0, 0, 0);
+
+:root {
+  --side-space: 1.5em;
+}
+
+$side-space: var(--side-space);
+
+@media (min-width: 1200px) {
+  :root {
+    --side-space: calc((100% - 1200px) / 2);
+  }
+}
