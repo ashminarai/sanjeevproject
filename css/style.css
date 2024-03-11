@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bigshot+One&family=BioRhyme:wght@200..800&family=Inter:wght@100..900&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
-  --side-space: 1.5em; }
+  --side-space: 1.5rem; }
 
 @media (min-width: 1200px) {
   :root {
@@ -30,7 +30,7 @@ a {
 
 .grid-container {
   display: grid;
-  grid-template-columns: [full-width-start] var(--side-space) [content-start] 1fr [content-end] var(--side-space) [full-width-end]; }
+  grid-template-columns: [full-width-start] calc(var(--side-space) / 2) [content-start] 1fr [content-end] calc(var(--side-space) / 2) [full-width-end]; }
 
 .grid-container > * {
   grid-column: content; }
@@ -102,6 +102,34 @@ a {
     font-weight: 400;
     font-size: clamp(14px, 3vw, 24px);
     font-family: "Istok Web", sans-serif; }
+
+.another-section {
+  grid-template-rows: [row-start] 1fr 1fr [row-end];
+  color: #fff; }
+  .another-section .background-image {
+    place-self: center;
+    aspect-ratio: 16/9;
+    grid-row: row;
+    grid-column: full-width; }
+  .another-section .content {
+    place-self: center;
+    grid-row: row; }
+    .another-section .content h3 {
+      font-size: clamp(1.5rem, 5.5vw, 4rem);
+      font-family: "Bigshot One", serif;
+      text-transform: uppercase; }
+    .another-section .content p {
+      font-family: "BioRhyme", serif;
+      font-size: clamp(0.875rem, 3.5vw, 2rem); }
+    .another-section .content .content-with-arrow {
+      font-family: "Inter", sans-serif;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      font-size: clamp(0.875rem, 2vw, 1.857rem); }
+    .another-section .content .arrow-span {
+      width: 7%; }
 
 .gallery-section {
   background-color: black;

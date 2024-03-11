@@ -3,10 +3,10 @@ $clr-secondary-50: rgba(0, 0, 0, 0.66);
 $clr-secondary-100: rgb(0, 0, 0);
 
 :root {
-  --side-space: 1.5em;
+  --side-space: 1.5rem;
 }
 
-$side-space: var(--side-space);
+$side-space: calc(var(--side-space) / 2);
 
 @media (min-width: 1200px) {
   :root {

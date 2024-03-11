@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bigshot+One&family=BioRhyme:wght@200..800&family=Inter:wght@100..900&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "./partials/variables";
 @import "./partials/reset";
 @import "./partials/common";
@@ -89,6 +89,43 @@
   }
 }
 
+// Another section
+.another-section {
+  grid-template-rows: [row-start]1fr 1fr[row-end];
+  color: $clr-primary;
+  .background-image {
+    place-self: center;
+    aspect-ratio: 16/9;
+    grid-row: row;
+    grid-column: full-width;
+  }
+
+  .content {
+    place-self: center;
+    grid-row: row;
+
+    h3 {
+      font-size: clamp(1.5rem, 5.5vw, 4rem);
+      font-family: "Bigshot One", serif;
+      text-transform: uppercase;
+    }
+    p {
+      font-family: "BioRhyme", serif;
+      font-size: clamp(0.875rem, 3.5vw, 2rem);
+    }
+
+    .content-with-arrow {
+      font-family: "Inter", sans-serif;
+      @include flex(flex-start, center);
+      gap: 5px;
+      font-size: clamp(0.875rem, 2vw, 1.857rem);
+    }
+
+    .arrow-span {
+      width: 7%;
+    }
+  }
+}
 // Gallery section
 .gallery-section {
   background-color: $clr-secondary-100;
