@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://kit.fontawesome.com/8b923788b3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main class="grid-container contact-main">
+      <!-- Navigation bar -->
+      <nav class="header grid-container">
+        <!-- Wrapper -->
+        <div class="header__top-nav">
+          <a href="index.html" class="header__top-nav__logo">
+            <img src="./Images/logo.png" alt="logo" />
+          </a>
+
+          <button
+            type="button"
+            id="hamburger"
+            class="header__top-nav__menu-toggle"
+            onclick="activateHamburger()"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <ul
+            id="header__top-nav__header__top-nav__nav-items"
+            class="header__top-nav__header__top-nav__nav-items"
+          >
+            <li class="header__top-nav__nav-item"><a href="./index.html">About us</a></li>
+            <li class="header__top-nav__nav-item"><a href="">jon's reserve</a></li>
+            <li class="header__top-nav__nav-item"><a href="">growing region</a></li>
+            <li class="header__top-nav__nav-item"><a href="">corporate</a></li>
+            <li class="header__top-nav__nav-item"><a href="./contact.html">contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="contact">
+        <h2 class="section__header">have some questions?</h2>
+        <section class="contact__content">
+          <div class="contact__content__image">
+            <img src="./Images/side_img.jpg" alt="" />
+          </div>
+          <form class="contact__content__form">
+            <div class="form-field-wrapper">
+              <label for="firstName">first name</label>
+              <input
+                id="firstName"
+                type="text"
+                name="firstName"
+                class="contact__content__form__field"
+              />
+            </div>
+
+            <div class="form-field-wrapper">
+              <label for="lastName">last name</label>
+              <input
+                id="lastName"
+                type="text"
+                name="lastName"
+                class="contact__content__form__field"
+              />
+            </div>
+
+            <div class="form-field-wrapper">
+              <label for="email">email</label>
+              <input id="email" type="text" name="email" class="contact__content__form__field" />
+            </div>
+
+            <div class="form-field-wrapper">
+              <label for="contact">contact</label>
+              <input
+                id="contact"
+                type="text"
+                name="contact"
+                class="contact__content__form__field"
+              />
+            </div>
+
+            <div class="form-field-wrapper form-field-wrapper--textarea">
+              <label for="message">message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                class="contact__content__form__field"
+              ></textarea>
+            </div>
+
+            <button class="btn primary">send</button>
+          </form>
+        </section>
+      </section>
+
+      <section class="map"></section>
+
+      <!-- footer section -->
+      <footer class="footer full-width grid-container">
+        <section class="footer__wrapper">
+          <article class="footer__article--contact">
+            <p>+61 36248 944441</p>
+            <p>info@tasmanianoysterco.com.au</p>
+          </article>
+
+          <article class="footer__article--logo">
+            <img src="./Images/logo.png" alt="" />
+          </article>
+
+          <ul class="footer__article--social">
+            <li class="social-link">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="social-link">
+              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li class="social-link">
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li class="social-link">
+              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+
+          <article class="footer__article--copyright">
+            <img src="./Images/Copyright.png" alt="" />
+            <span>2023 Tasmanian Oyster Co.</span>
+          </article>
+        </section>
+      </footer>
+    </main>
+
+    <!-- Js Link here -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

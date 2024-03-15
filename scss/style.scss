@@ -4,36 +4,106 @@
 @import "./partials/common";
 @import "./partials/mixins";
 
-.header-section {
-  .navigation {
-    position: fixed;
-    top: 0;
-    overflow-x: clip;
-    overflow-y: visible;
-    width: 100%;
-    background-color: $clr-secondary-50;
+// Contact page
+.contact-main {
+  background-color: $clr-secondary-100;
+  color: $clr-primary;
+  padding-top: 6rem;
+
+  .section__header {
+    padding: 2rem 0;
+    color: $clr-primary;
   }
+
+  .contact__content {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .contact__content__form {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    gap: 2.5rem;
+    max-width: 650px;
+  }
+
+  .contact__content__image {
+    max-width: 650px;
+  }
+
+  .form-field-wrapper {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    font-family: "Inter", sans-serif;
+
+    label {
+      position: absolute;
+      top: 50%;
+      translate: 0 -50%;
+      left: 0.5rem;
+      color: $clr-secondary-100;
+      text-transform: capitalize;
+      font-size: clamp(0.875rem, 1vw, 11.125rem);
+      transition: top 0.25s ease;
+    }
+
+    &:focus-within label {
+      top: -1rem;
+      color: $clr-primary;
+    }
+
+    .contact__content__form__field {
+      width: 100%;
+      height: 100%;
+      font-size: 1.125rem;
+      padding: 0.5em;
+    }
+  }
+
+  .form-field-wrapper--textarea {
+    height: 150px;
+  }
+}
+
+.map {
+  aspect-ratio: 16/6.5;
+  background-color: pink;
+}
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  overflow-x: clip;
+  overflow-y: visible;
+  width: 100%;
+  background-color: $clr-secondary-50;
+}
+.header-section {
   .background-image img {
     width: 100%;
     height: 100%;
   }
 }
 
-.navbar {
+.header__top-nav {
   @include flex(space-between, center);
   padding: 0.75em 0;
 
-  .company-logo {
+  .header__top-nav__logo {
     width: clamp(3.5rem, 10vw, 110px);
   }
 
-  .hamburger-menu {
+  .header__top-nav__menu-toggle {
+    background: transparent;
+    border: none;
     font-size: 1.25rem;
     z-index: 10;
     color: white;
   }
 
-  .nav-items {
+  .header__top-nav__header__top-nav__nav-items {
     @include flex(space-around, space-between);
     flex-direction: column;
 
@@ -55,7 +125,7 @@
     border-radius: 10px;
   }
 
-  .nav-item {
+  .header__top-nav__nav-item {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     text-transform: uppercase;
@@ -67,49 +137,41 @@
 }
 
 // About section css
-.about-section {
+.about {
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
   gap: 0.5rem;
   padding: 2em 0;
 
-  .section-header {
+  .about__header {
     text-align: center;
   }
 
-  .about-content {
+  .about__content {
     width: 100%;
     justify-content: center;
     display: grid;
     gap: 20px;
+    gap: 20px;
   }
 
-  .grid-item {
+  .about__content__section {
     max-width: 400px;
   }
 
-  .mid {
+  .about__btn {
     order: 3;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .btn {
-    width: 100%;
-    padding: 0.75em 0;
-  }
-  .btn:hover {
-    color: $clr-primary;
-    background-color: $clr-secondary-100;
+    justify-content: center;
   }
 
-  .about-company {
+  .about__info__paragraph {
     font-weight: 400;
     font-family: "Istok Web", sans-serif;
     font-size: clamp(0.875rem, 2.5vw, 1.5rem);
     text-transform: none;
   }
-  .grid-item h3 {
+  .about__content__section h3 {
     font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: 700;
   }
@@ -152,7 +214,7 @@
     }
   }
 }
-.section-header {
+.section__header {
   font-size: clamp(20px, 4vw, 48px);
   font-weight: 700;
   color: $clr-secondary-100;
@@ -160,38 +222,29 @@
   text-align: center;
 }
 // Gallery section
-.gallery-section {
+.gallery {
   background-color: $clr-secondary-100;
   font-family: "Inter", sans-serif;
   color: $clr-primary;
   padding-bottom: 2rem;
 
-  .section-header {
+  .gallery__header {
     background-color: $clr-primary;
     padding: 1em 0;
   }
 
-  .gallery-content {
+  .gallery__content {
     margin-top: 5px;
     columns: auto;
     gap: 1rem;
   }
 
-  .gallery-footer {
-    display: flex;
-    justify-content: center;
-
-    .btn {
-      color: $clr-primary;
-    }
-
-    .btn:hover {
-      color: $clr-secondary-100;
-      background-color: white;
-    }
+  .gallery__btn-wrapper {
+    // display: flex;
+    justify-self: center;
   }
 
-  .gallery-item {
+  .gallery__image-container {
     margin: auto;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -200,49 +253,46 @@
 }
 
 // Footer section css
-.footer-section {
+.footer {
   color: $clr-primary;
   background: $clr-secondary-100;
   padding: 1.5rem 0 0.5rem;
   font-family: "Inter", sans-serif;
   font-weight: 400;
 
-  .footer-content {
+  .footer__wrapper {
     display: grid;
     justify-items: center;
     gap: 1.5rem;
   }
 
-  .footer-info {
+  .footer__article--contact {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     display: grid;
     gap: 0.5rem;
     place-content: center;
   }
-  .footer-socials {
+  .footer__article--social {
     @include flex(center, center);
     gap: 1rem;
   }
 
-  .social-link {
+  .social-link a {
     @include flex(center, center);
     width: 40px;
     aspect-ratio: 1/1;
     background-color: $clr-primary;
     border-radius: 100%;
-
-    a {
-      color: $clr-secondary-100;
-    }
+    color: $clr-secondary-100;
   }
 
-  .footer-copyright {
+  .footer__article--copyright {
     border-top: 1px solid white;
     width: 100%;
     padding: 0.875em;
     @include flex(center, center);
     span {
-      font-size: clamp(0.875rem, 2.5vw, 1.75rem);
+      font-size: clamp(0.875rem, 2.5vw, 2rem);
     }
     img {
       width: fit-content;
@@ -252,11 +302,11 @@
 
 // Media queries for responsiveness
 @media (min-width: 768px) {
-  .navigation {
+  .header {
     backdrop-filter: blur(10px);
   }
-  .navbar {
-    .nav-items {
+  .header__top-nav {
+    .header__top-nav__header__top-nav__nav-items {
       position: static;
       flex-direction: row;
       translate: 0;
@@ -265,51 +315,81 @@
     }
   }
 
-  .hamburger-menu {
+  .header__top-nav__menu-toggle {
     display: none;
   }
 
-  .gallery-section {
-    .gallery-content {
+  .gallery {
+    .gallery__content {
       columns: auto 2;
     }
   }
 
-  .footer-content {
-    grid-template-columns: 1fr 1fr 1fr;
+  .contact__content {
+    justify-content: center;
+  }
 
-    .footer-copyright {
+  .footer__wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    .footer__article--copyright {
       grid-column: 1/-1;
     }
   }
 }
 
 @media (min-width: 1024px) {
-  .about-section {
-    .section-header {
+  .about {
+    .section__header {
       text-align: start;
     }
-    .about-content {
+    .about__content {
       grid-template-columns: 1.25fr 1fr 1fr;
+      grid-template-rows:
+        [row-start img-first-start]repeat(3, 10px) [img-sec-start] repeat(42, 10px)
+        [img-first-end] repeat(3, 10px) [button-start] repeat(8, 10px) [row-end img-sec-end button-end];
+      row-gap: 0;
     }
-    .grid-item {
-      // width: 100%;
+    .about__content__section {
       max-width: 500px;
+      display: flex;
     }
-    .mid {
-      order: 0;
+
+    .about__info {
+      grid-row: row;
+      flex-direction: column;
     }
-    .grid-item:last-child {
-      width: 100%;
-      margin-top: 1rem;
+
+    .about__image.first {
+      grid-row: img-first;
+    }
+    .about__btn {
+      align-items: center;
+      grid-row: button;
+    }
+    .about__image.second {
+      grid-row: img-sec;
     }
     .grid-item:last-child img {
       width: 100%;
     }
   }
-  .gallery-section {
-    .gallery-content {
+  .gallery {
+    .gallery__content {
       columns: auto 3;
+    }
+  }
+
+  .contact-main {
+    .section__header {
+      text-align: start;
+    }
+  }
+
+  .contact__content {
+    grid-template-columns: repeat(2, 1fr);
+
+    .contact__content__form {
+      padding: 2% 6%;
     }
   }
 }
@@ -319,6 +399,18 @@
     .background-image {
       margin: center;
       grid-column: content;
+    }
+  }
+
+  .contact__content {
+    .contact__content__form {
+      padding: 130px 80px;
+
+      .form-field-wrapper {
+        label {
+          font-size: clamp(0.875rem, 0.75vw, 11.125rem);
+        }
+      }
     }
   }
 }

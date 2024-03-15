@@ -25,3 +25,23 @@
 .btn:hover {
   cursor: pointer;
 }
+
+.secondary {
+  color: $clr-secondary-100;
+  outline-color: $clr-secondary-100;
+}
+
+.secondary:hover {
+  color: $clr-primary;
+  background-color: $clr-secondary-100;
+}
+
+.primary {
+  color: $clr-primary;
+  outline-color: $clr-primary;
+}
+
+.primary:hover {
+  color: $clr-secondary-100;
+  background-color: white;
+}

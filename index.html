@@ -3,32 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
+    <title>Home</title>
 
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="https://kit.fontawesome.com/8b923788b3.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <main class="grid-container">
       <!-- Main Navigation -->
       <header class="header-section grid-container full-width">
-        <nav class="navigation grid-container">
+        <nav class="header grid-container">
           <!-- Wrapper -->
-          <div class="navbar">
-            <div class="company-logo">
+          <div class="header__top-nav">
+            <a href="index.html" class="header__top-nav__logo">
               <img src="./Images/logo.png" alt="logo" />
-            </div>
+            </a>
 
-            <div id="hamburger" class="hamburger-menu" onclick="activateHamburger()">
+            <button
+              type="button"
+              id="hamburger"
+              class="header__top-nav__menu-toggle"
+              onclick="activateHamburger()"
+            >
               <i class="fa-solid fa-bars"></i>
-            </div>
+            </button>
 
-            <ul id="nav-items" class="nav-items">
-              <li class="nav-item"><a href="about">About us</a></li>
-              <li class="nav-item"><a href="">jon's reserve</a></li>
-              <li class="nav-item"><a href="">growing region</a></li>
-              <li class="nav-item"><a href="">corporate</a></li>
-              <li class="nav-item"><a href="">contact</a></li>
+            <ul
+              id="header__top-nav__header__top-nav__nav-items"
+              class="header__top-nav__header__top-nav__nav-items"
+            >
+              <li class="header__top-nav__nav-item"><a href="./index.html">About us</a></li>
+              <li class="header__top-nav__nav-item"><a href="">jon's reserve</a></li>
+              <li class="header__top-nav__nav-item"><a href="">growing region</a></li>
+              <li class="header__top-nav__nav-item"><a href="">corporate</a></li>
+              <li class="header__top-nav__nav-item"><a href="./contact.html">contact</a></li>
             </ul>
           </div>
         </nav>
@@ -38,23 +46,23 @@
       </header>
 
       <!-- About Us section -->
-      <section class="about-section grid-container full-width">
-        <h2 class="section-header">about us</h2>
+      <section class="about grid-container full-width">
+        <h2 class="section__header about__header">about us</h2>
 
-        <article class="about-content">
-          <div class="grid-item">
-            <h3>TASMANIAN OYSTER CO.</h3>
-            <p class="about-company">
+        <article class="about__content">
+          <div class="about__content__section about__info">
+            <h3 class="about__info__heading">TASMANIAN OYSTER CO.</h3>
+            <p class="about__info__paragraph">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
               has been the industry's standard dummy text ever since the 1500s, when an unknown
               printer took a galley of type and scrambled it to make a type specimen book.
             </p>
           </div>
-          <div class="grid-item mid">
+          <div class="about__content__section about__image first">
             <img src="./Images/pic_5.jpg" alt="" />
-            <button class="btn about-btn">view more</button>
           </div>
-          <div class="grid-item">
+          <button class="btn secondary about__btn">view more</button>
+          <div class="about__content__section about__image second">
             <img src="./Images/Rectangle_5.jpg" alt="" />
           </div>
         </article>
@@ -77,54 +85,65 @@
       </section>
 
       <!-- Galary section -->
-      <section class="gallery-section full-width grid-container">
-        <h2 class="section-header full-width">gallery</h2>
-        <section class="gallery-content">
-          <div class="gallery-item">
+      <section class="gallery full-width grid-container">
+        <h2 class="section__header gallery__header full-width">gallery</h2>
+        <section class="gallery__content">
+          <div class="gallery__image-container">
             <img src="./Images/pic_1.jpg" alt="pic_1" />
           </div>
-          <div class="gallery-item">
+          <div class="gallery__image-container">
             <img src="./Images/pic_2.png" alt="pic_2" />
           </div>
-          <div class="gallery-item">
+          <div class="gallery__image-container">
             <img src="./Images/pic_3.jpg" alt="pic_3" />
           </div>
-          <div class="gallery-item">
+          <div class="gallery__image-container">
             <img src="./Images/pic_4.jpg" alt="pic_4" />
           </div>
-          <div class="gallery-item">
+          <div class="gallery__image-container">
             <img src="./Images/pic_5.jpg" alt="pic_5" />
           </div>
-          <div class="gallery-item">
+          <div class="gallery__image-container">
             <img src="./Images/pic_6.jpg" alt="pic_6" />
           </div>
-          <div class="gallery-item">
+          <div class="gallery__image-container">
             <img src="./Images/pic_7.jpg" alt="pic_7" />
           </div>
         </section>
-        <div class="gallery-footer">
-          <button class="btn gallery-btn">view full gallery</button>
+        <div class="gallery__btn-wrapper">
+          <button class="btn primary">view full gallery</button>
         </div>
       </section>
 
       <!-- footer section -->
-      <footer class="footer-section full-width grid-container">
-        <section class="footer-content">
-          <article class="footer-info">
+      <footer class="footer full-width grid-container">
+        <section class="footer__wrapper">
+          <article class="footer__article--contact">
             <p>+61 36248 944441</p>
             <p>info@tasmanianoysterco.com.au</p>
           </article>
-          <article class="footer-logo">
+
+          <article class="footer__article--logo">
             <img src="./Images/logo.png" alt="" />
           </article>
-          <article class="footer-socials">
-            <a href="" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-            <a href="" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="" class="social-link"><i class="fa-brands fa-twitter"></i></a>
-            <a href="" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
-          </article>
-          <article class="footer-copyright">
-            <img class="Copyright-img" src="./Images/Copyright.png" alt="" />
+
+          <ul class="footer__article--social">
+            <li class="social-link">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="social-link">
+              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li class="social-link">
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li class="social-link">
+              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+
+          <article class="footer__article--copyright">
+            <img src="./Images/Copyright.png" alt="" />
             <span>2023 Tasmanian Oyster Co.</span>
           </article>
         </section>
